@@ -22,6 +22,9 @@ int pos;
 
 void setup() {
   AFMS.begin();  // create with the default frequency 1.6KHz
+
+TWBR = ((F_CPU /400000l) - 16) / 2; // Change the i2c clock to 400KHz
+  
 //  myMotor->setSpeed(10);  // 10 rpm   
 //  myServo.attach(10);
   pos = 0;
